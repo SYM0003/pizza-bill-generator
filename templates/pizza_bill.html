@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pizza Bill Generator</title>
+</head>
+
+<body>
+    <h1>Pizza Bill</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="pizza_type">Select Pizza Type:</label>
+        <select name="pizza_type" id="pizza_type">
+            <option value="regular">Regular</option>
+            <option value="deluxe">Deluxe</option>
+        </select><br>
+
+        <label for="veg">Is it Veg?</label>
+        <input type="checkbox" name="veg" id="veg" value="true"><br>
+
+        <label for="extra_cheese">Add Extra Cheese?</label>
+        <input type="checkbox" name="extra_cheese" id="extra_cheese" value="true"><br>
+
+        <label for="extra_toppings">Add Extra Toppings?</label>
+        <input type="checkbox" name="extra_toppings" id="extra_toppings" value="true"><br>
+
+        <label for="takeaway">Takeaway?</label>
+        <input type="checkbox" name="takeaway" id="takeaway" value="true"><br>
+
+        <input type="submit" value="Generate Bill">
+    </form>
+
+    {% if bill %}
+    <h2>Bill Details</h2>
+    <pre>
+        {{ bill }}
+    </pre>
+    {% endif %}
+</body>
+
+</html>
