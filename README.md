@@ -28,12 +28,14 @@ This Django web application allows users to generate bills for pizza orders. It 
   ```
 
 5. Install the project dependencies:
+   - django
+   - python3
 
-6. Run the Django development server:
+7. Run the Django development server:
     ```
     python manage.py runserver
     ```
-7. Access the application in your web browser at `http://localhost:8000`.
+8. Access the application in your web browser at `http://localhost:8000`.
 
 ## Usage
 1. Select the type of pizza (regular/deluxe).
